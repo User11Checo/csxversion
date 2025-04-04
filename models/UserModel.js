@@ -10,5 +10,6 @@ const userSchema = new mongoose.Schema({
   temp_ingreso: {type: Number, default: 0} //Para indicar el ingreso restante 
 });
 
-module.exports = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
+module.exports = User;
 

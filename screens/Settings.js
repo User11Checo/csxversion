@@ -30,7 +30,7 @@ export default function Settings({ navigation }) {
     fetchUserData();
   }, [userId]);
 
-  // Guardar cambios en la base de datos
+  
   const handleSave = async () => {
     try {
       const response = await fetch(`http://localhost:3000/api/user/${userId}`, {
@@ -41,7 +41,7 @@ export default function Settings({ navigation }) {
 
       if (response.ok) {
         Alert.alert('Éxito', 'Datos actualizados correctamente.');
-        setIsEditing(false); // Salir del modo edición
+        setIsEditing(false); 
       } else {
         const data = await response.json();
         Alert.alert('Error', data.error || 'No se pudieron actualizar los datos.');
@@ -52,9 +52,9 @@ export default function Settings({ navigation }) {
     }
   };
 
-  // Manejo del cierre de sesión
+  
   const handleLogout = () => {
-    // Navegar a la pantalla de inicio de sesión
+  
     navigation.navigate('LoginScreen');
   };
 
@@ -92,9 +92,9 @@ export default function Settings({ navigation }) {
           style={styles.editButton}
           onPress={() => {
             if (isEditing) {
-              handleSave(); // Guardar cambios si está en modo edición
+              handleSave(); 
             } else {
-              setIsEditing(true); // Activar modo edición
+              setIsEditing(true); 
             }
           }}
         >
