@@ -21,9 +21,10 @@ const RegisterScreen = () => {
           password,
         }),
       });
-
+       
       const data = await response.json();
 
+      
       if (response.status === 201) {
         Alert.alert('Registro exitoso', `Bienvenido, ${name} ${surname}`);
       } else {
