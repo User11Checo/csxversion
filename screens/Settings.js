@@ -6,7 +6,7 @@ export default function Settings({ navigation }) {
   const { userId } = React.useContext(UserContext); // Obtener el userId desde el contexto
   const [profileName, setProfileName] = useState(''); // Nombre del usuario
   const [profileEmail, setProfileEmail] = useState(''); // Correo electrónico del usuario
-  const [isEditing, setIsEditing] = useState(false); // Estado para modo edición
+  const [isEditing, setIsEditing] = useState(false); // Estado para modo edición kjdhjhj
 
   // Cargar datos del usuario al cargar la pantalla
   useEffect(() => {
